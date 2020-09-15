@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+body {
+    margin: 0 20px;
+    font-weight: bold;
+    background-image: url("../images/bg.jpg");
+}
+input[type=radio] {
+    display: none;
+}
+/* to vanish */
+.vanish {
+    display: none;
+}
+
+/* start_window */
+.start_window {
+    width: 100%;
+    height: 100%;
+    min-height: 640px;
+    background-color:white;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+}
+.nekoten_logo img {
+    width: 360px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+.start_explanation {
+    font-size: 24px;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+.start_next_btn img {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    width: 212px;
+    transform : translate(-50%, 0);
+    font-size: 24px;
+}
+.select_prefecture {
+    padding: 20px 0;
+    opacity: 0;
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    top: 32%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    width: 320px;
+    cursor: pointer;
+}
+.selected_prefecture {
+    padding: 20px 0;
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    top: 32%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    border: 1px solid black;
+    width: 320px;
+    cursor: pointer;
+}
+.click_select_txt {
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    top: 48%;
+    left: 50%;
+    transform : translate(-50%, 0);
+}
+.start_icon img {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    width: 240px;
+    transform : translate(-50%, 0);
+}
+
+/* クイズ画面 */
+
+/* header */
+header {
+    height: 100px;
+    width: 100%;
+}
+.header {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+}
+/* main */
+main {
+    text-align: center;
+}
+/* クイズ */
+.quiz_theme {
+    font-size: 28px;
+    margin: 60px 0;
+}
+label {
+    display: block;
+    width: 400px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 40px;
+    background-color: white;
+}
+input[type="radio"]:checked + label{
+    background-color: rgba(255, 34, 34, 0.836);
+}
+#quiz label:last-child {
+    margin-bottom: 40px;
+}
+/* 決定ボタン */
+.decide_btn {
+    position: relative;
+    margin-bottom: 24px;
+}
+.decide_btn img {
+    width: 260px;
+    text-align: center;
+}
+.decide_btn div {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+}
+
+/* 戻るボタン */
+.back_btn {
+    width: 240px;
+    height: 68px;
+    font-size: 24px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* commentary_window */
+.commentary_window {
+    width: 100%;
+    height: 100%;
+    min-height: 640px;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    background-image: url("../images/bg.jpg");
+}
+.commentary_window_header {
+    height: 100px;
+    width: 100%;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.commentary_window_header img {
+    width: 300px;
+}
+.commentary_window hr {
+    margin: 0 20px;
+}
+.correct_answer {  
+    color: rgb(255, 68, 68);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    font-size: 36px;
+}
+.inncorrect_answer {
+    color: rgb(73, 73, 255);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    font-size: 32px;
+}
+.explanation {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+}
+.next_quiz_btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 140px;
+    transform : translate(-50%, -50%);
+    font-size: 24px;
+}
+.next_quiz_btn img {
+    width: 180px;
+}
+
+/* result */
+.result_window {
+    width: 100%;
+    height: 100%;
+    min-height: 640px;
+    background-color:white;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    background: url("../images/result_bg.jpg") rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+}
+.your_title_is {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform : translate(-50%, 0);
+    font-size: 24px;
+}
+.your_title {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    font-size: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.result_comment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+}
+.retry_btn {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    width: 240px;
+    height: 68px;
+    transform : translate(-50%, -50%);
+    font-size: 24px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+/* rest */
+.rest_cat img {
+    width: 400px;
+}
+
+/* footer */
+.fix_cat {
+    width: 180px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+@media screen and (max-width: 1000px) { 
+    .fix_cat {
+        display: none;
+    }
+}
